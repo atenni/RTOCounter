@@ -24,7 +24,7 @@ def parse_date(date_string, is_start_date):
             year = 9999
         else:
             year = 1900
-        
+
         date = datetime.date(year, 1, 1)
     return date
 
@@ -51,7 +51,7 @@ def main(csv_file):
 
     year_counter = Counter(year_list)
 
-    with open('RTO_yearly_counts.csv', 'w') as f:
+    with open('RTO_yearly_counts.csv', 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(["Year", "Number of current RTOs"])
         for key, count in year_counter.items():
