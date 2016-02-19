@@ -1,6 +1,14 @@
 # RTO Counter
 
-A quick Python 3 script to parse available public data in order to generate a time series of current Australian RTOs. Turns `RtoList.csv` into `RTO_yearly_counts.csv`.
+A quick Python 3 script to parse available public data in order to generate a time series of current Australian RTOs.
+
+## How to use
+
+```bash
+python3 CountRTOs
+```
+
+...turns `RtoList.csv` into `RTO_yearly_counts.csv`.
 
 ## Steps to get raw data (as of 19/Feb/2016)
 
