@@ -23,9 +23,10 @@ plot(startplot, col=rgb(0,0,1,1/4))
 plot(endplot, col=rgb(1,0,0,1/4), add=TRUE)
 
 # THIS IS MUCH CLOSER TO WHAT WE WANT!!!
-hist(RtoList$Start.Date[order(RtoList$Start.Date)],"years",col=rgb(1,1,0,0.2), main="", freq=TRUE)
+hist(RtoList$Start.Date[order(RtoList$Start.Date)],"years",col=rgb(0,1,0,0.2), xlab="RTO starting/ending per year", main="", freq=TRUE)
 par(new=TRUE)
-hist(RtoList$End.Date[order(RtoList$End.Date)],"years",col=rgb(0,1,1,0.2), main="", xlab="", ylab="", axes=FALSE, freq=TRUE)
+hist(RtoList$End.Date[order(RtoList$End.Date)],"years",col=rgb(1,0,0,0.2), main="", xlab="", ylab="", axes=FALSE, freq=TRUE)
+legend("top", c("Starting", "Ending"),lty=c(1,1), lwd=c(2.5,2,5),col=c("green", "red"))
 
 # Get number of current RTOs
 current_RTOs <- function(rto_frame)
